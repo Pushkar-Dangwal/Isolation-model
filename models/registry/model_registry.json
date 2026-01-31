@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-01-31T15:18:46.039794",
+  "models": {
+    "test_no_error_handling": {
+      "20260131_181515": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-01-31T18:15:15.434771",
+        "file_path": "models\\test_no_error_handling\\20260131_181515\\test_no_error_handling.joblib",
+        "metadata_path": "models\\test_no_error_handling\\20260131_181515\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 703230,
+        "hash": "f2d50feff4abe166ce06ab1d86ef5de9ef8211f4c201514d48acc79260b217d4"
+      }
+    },
+    "production_fraud_detector_v1_optimized": {
+      "v1.0_20260131_183027": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-01-31T18:30:27.154769",
+        "file_path": "models\\production_fraud_detector_v1_optimized\\v1.0_20260131_183027\\production_fraud_detector_v1_optimized.joblib",
+        "metadata_path": "models\\production_fraud_detector_v1_optimized\\v1.0_20260131_183027\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 775394,
+        "hash": "ebd7ff1d61289a6e2bd0730829bf21ba03377704c93035ea20422a3d81d5cfea"
+      }
+    }
+  },
+  "version": "1.0",
+  "last_updated": "2026-01-31T18:30:27.163630"
+}

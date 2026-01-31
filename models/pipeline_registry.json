@@ -1,0 +1,44 @@
+{
+  "created_at": "2026-01-31T15:18:46.045732",
+  "pipelines": {
+    "test_no_error_handling_preprocessing": {
+      "20260131_181249": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-01-31T18:12:49.400426",
+        "preprocessor_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181249\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181249\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181249\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      },
+      "20260131_181515": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-01-31T18:15:15.375066",
+        "preprocessor_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181515\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181515\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\test_no_error_handling_preprocessing\\20260131_181515\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "production_fraud_detector_v1_optimized_preprocessing": {
+      "v1.0_20260131_183027": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-01-31T18:30:27.069864",
+        "preprocessor_path": "pipelines\\production_fraud_detector_v1_optimized_preprocessing\\v1.0_20260131_183027\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\production_fraud_detector_v1_optimized_preprocessing\\v1.0_20260131_183027\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\production_fraud_detector_v1_optimized_preprocessing\\v1.0_20260131_183027\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    }
+  },
+  "version": "1.0",
+  "last_updated": "2026-01-31T18:30:27.091175"
+}

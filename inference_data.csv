@@ -1,0 +1,101 @@
+transaction_id,timestamp,sender_account,receiver_account,amount,transaction_type,merchant_category,location,device_used,is_fraud
+tx_000000,2026-01-27 08:04:59.154067,sender_0000,receiver_0000,111.5,deposit,retail,Phoenix,mobile,0
+tx_000001,2026-01-27 10:51:13.154067,sender_0001,receiver_0001,385.87,deposit,gas,San Antonio,mobile,0
+tx_000002,2026-01-28 22:11:59.154067,sender_0002,receiver_0002,74.99,payment,grocery,NYC,mobile,0
+tx_000003,2026-01-21 05:52:12.154067,sender_0003,receiver_0003,133.7,withdrawal,gas,LA,mobile,0
+tx_000004,2026-01-02 22:17:37.154067,sender_0004,receiver_0004,14.23,transfer,restaurant,Phoenix,web,0
+tx_000005,2026-01-10 03:02:49.154067,sender_0005,receiver_0005,46.16,transfer,gas,San Diego,mobile,0
+tx_000006,2026-01-27 12:21:18.154067,sender_0006,receiver_0006,494.43,withdrawal,retail,Houston,mobile,0
+tx_000007,2026-01-19 01:46:35.154067,sender_0007,receiver_0007,49.62829985906855,withdrawal,gas,LA,mobile,1
+tx_000008,2026-01-24 20:07:43.154067,sender_0008,receiver_0008,227.01,withdrawal,entertainment,Philadelphia,mobile,0
+tx_000009,2026-01-14 19:14:23.154067,sender_0009,receiver_0009,727.62,payment,restaurant,San Antonio,mobile,0
+tx_000010,2026-01-27 22:52:24.154067,sender_0010,receiver_0010,108.51,withdrawal,retail,LA,web,0
+tx_000011,2026-01-16 00:05:00.154067,sender_0011,receiver_0011,4.36,withdrawal,grocery,Chicago,mobile,0
+tx_000012,2026-01-04 20:55:56.154067,sender_0012,receiver_0012,89.15,deposit,restaurant,Houston,mobile,0
+tx_000013,2026-01-26 09:37:11.154067,sender_0013,receiver_0013,48.34,withdrawal,online,Houston,mobile,0
+tx_000014,2026-01-05 11:09:14.154067,sender_0014,receiver_0014,110.13,payment,grocery,Chicago,web,0
+tx_000015,2026-01-10 18:19:50.154067,sender_0015,receiver_0015,164.71,payment,grocery,LA,mobile,0
+tx_000016,2026-01-17 12:20:44.154067,sender_0016,receiver_0016,16.95,transfer,entertainment,NYC,mobile,0
+tx_000017,2026-01-22 02:28:00.154067,sender_0017,receiver_0017,15.4,deposit,online,NYC,mobile,0
+tx_000018,2026-01-05 10:30:58.154067,sender_0018,receiver_0018,43.56,deposit,grocery,San Diego,pos,0
+tx_000019,2026-01-22 18:46:02.154067,sender_0019,receiver_0019,12.83,transfer,restaurant,San Diego,mobile,0
+tx_000020,2026-01-10 19:35:32.154067,sender_0020,receiver_0020,68.42,transfer,restaurant,Chicago,web,0
+tx_000021,2026-01-02 20:22:24.154067,sender_0021,receiver_0021,46.06,payment,online,San Diego,pos,0
+tx_000022,2026-01-16 06:25:41.154067,sender_0022,receiver_0022,2836.4,payment,gas,Philadelphia,mobile,0
+tx_000023,2026-01-28 01:32:00.154067,sender_0023,receiver_0023,11.73,deposit,grocery,Houston,pos,0
+tx_000024,2026-01-17 19:26:54.154067,sender_0024,receiver_0024,16.89,transfer,grocery,Houston,web,0
+tx_000025,2026-01-18 16:07:54.154067,sender_0025,receiver_0025,103.12,transfer,restaurant,NYC,mobile,0
+tx_000026,2026-01-13 02:30:25.154067,sender_0026,receiver_0026,202.16,payment,online,NYC,mobile,0
+tx_000027,2026-01-16 18:49:20.154067,sender_0027,receiver_0027,1687.22,transfer,grocery,Phoenix,atm,0
+tx_000028,2026-01-31 13:16:13.154067,sender_0028,receiver_0028,622.9,transfer,retail,Houston,web,0
+tx_000029,2026-01-12 06:23:49.154067,sender_0029,receiver_0029,187.84,withdrawal,restaurant,LA,pos,0
+tx_000030,2026-01-19 13:52:31.154067,sender_0030,receiver_0030,84.74,withdrawal,gas,San Diego,mobile,0
+tx_000031,2026-01-27 22:44:31.154067,sender_0031,receiver_0031,866.0402758207217,transfer,grocery,San Antonio,atm,1
+tx_000032,2026-01-23 20:51:15.154067,sender_0032,receiver_0032,21.86,payment,grocery,NYC,mobile,0
+tx_000033,2026-01-09 05:33:20.154067,sender_0033,receiver_0033,33.98,payment,retail,San Diego,atm,0
+tx_000034,2026-01-07 18:03:44.154067,sender_0034,receiver_0034,5.91,payment,online,San Diego,web,0
+tx_000035,2026-01-09 03:42:12.154067,sender_0035,receiver_0035,38.73,transfer,restaurant,San Diego,mobile,0
+tx_000036,2026-01-19 00:35:31.154067,sender_0036,receiver_0036,231.36,payment,online,NYC,mobile,0
+tx_000037,2026-01-02 09:55:14.154067,sender_0037,receiver_0037,39.86,deposit,restaurant,San Antonio,mobile,0
+tx_000038,2026-01-02 15:10:43.154067,sender_0038,receiver_0038,17.1,payment,online,Houston,mobile,0
+tx_000039,2026-01-12 16:27:46.154067,sender_0039,receiver_0039,31.83,deposit,grocery,Philadelphia,mobile,0
+tx_000040,2026-01-24 06:32:23.154067,sender_0040,receiver_0040,161.76,payment,online,San Diego,web,0
+tx_000041,2026-01-29 14:49:31.154067,sender_0041,receiver_0041,37.2,transfer,grocery,Philadelphia,web,0
+tx_000042,2026-01-29 02:11:19.154067,sender_0042,receiver_0042,195.37,payment,grocery,San Diego,atm,0
+tx_000043,2026-01-29 18:12:57.154067,sender_0043,receiver_0043,7.64,payment,gas,San Diego,pos,0
+tx_000044,2026-01-07 18:22:47.154067,sender_0044,receiver_0044,14.8,withdrawal,grocery,San Diego,web,0
+tx_000045,2026-01-31 14:10:33.154067,sender_0045,receiver_0045,25.53,transfer,grocery,Chicago,atm,0
+tx_000046,2026-01-16 18:16:45.154067,sender_0046,receiver_0046,7.65,payment,gas,LA,atm,0
+tx_000047,2026-01-31 09:39:55.154067,sender_0047,receiver_0047,4516.51,payment,entertainment,Chicago,mobile,0
+tx_000048,2026-01-29 23:16:38.154067,sender_0048,receiver_0048,10.54,withdrawal,grocery,San Diego,mobile,0
+tx_000049,2026-01-18 14:47:58.154067,sender_0049,receiver_0049,215.36,transfer,grocery,NYC,mobile,0
+tx_000050,2026-01-02 10:35:37.154067,sender_0050,receiver_0050,20.1,deposit,online,Houston,mobile,0
+tx_000051,2026-01-22 18:47:34.154067,sender_0051,receiver_0051,25.26,payment,retail,LA,mobile,0
+tx_000052,2026-01-04 14:54:57.154067,sender_0052,receiver_0052,85.8,transfer,gas,Phoenix,mobile,0
+tx_000053,2026-01-10 22:53:00.154067,sender_0053,receiver_0053,6.12,withdrawal,restaurant,San Diego,pos,0
+tx_000054,2026-01-12 00:48:51.154067,sender_0054,receiver_0054,20.2,withdrawal,online,San Diego,atm,0
+tx_000055,2026-01-27 03:47:51.154067,sender_0055,receiver_0055,43.83,deposit,grocery,LA,mobile,0
+tx_000056,2026-01-08 15:32:34.154067,sender_0056,receiver_0056,15.35,transfer,retail,San Diego,mobile,0
+tx_000057,2026-01-23 07:21:57.154067,sender_0057,receiver_0057,15.9,payment,retail,Phoenix,mobile,0
+tx_000058,2026-01-31 06:04:38.154067,sender_0058,receiver_0058,278.69,payment,gas,Chicago,web,0
+tx_000059,2026-01-22 04:16:44.154067,sender_0059,receiver_0059,246.53,deposit,grocery,Philadelphia,web,0
+tx_000060,2026-01-25 10:39:04.154067,sender_0060,receiver_0060,28.14,transfer,retail,Houston,atm,0
+tx_000061,2026-01-10 23:31:18.154067,sender_0061,receiver_0061,48.12,transfer,restaurant,Chicago,mobile,0
+tx_000062,2026-01-19 02:38:58.154067,sender_0062,receiver_0062,349.16,transfer,restaurant,Philadelphia,atm,0
+tx_000063,2026-01-28 08:03:22.154067,sender_0063,receiver_0063,6.43,transfer,online,LA,pos,0
+tx_000064,2026-01-17 10:28:24.154067,sender_0064,receiver_0064,90.65,payment,online,LA,mobile,0
+tx_000065,2026-01-15 18:39:54.154067,sender_0065,receiver_0065,1055.59,transfer,retail,Chicago,atm,0
+tx_000066,2026-01-04 19:10:25.154067,sender_0066,receiver_0066,1040.6,transfer,retail,LA,web,0
+tx_000067,2026-01-25 21:44:54.154067,sender_0067,receiver_0067,2.97,withdrawal,retail,Chicago,web,0
+tx_000068,2026-01-28 06:23:44.154067,sender_0068,receiver_0068,17.39,deposit,online,Phoenix,mobile,0
+tx_000069,2026-01-03 22:19:18.154067,sender_0069,receiver_0069,70.32,transfer,retail,San Antonio,atm,0
+tx_000070,2026-01-16 08:55:30.154067,sender_0070,receiver_0070,7.52,transfer,online,San Antonio,web,0
+tx_000071,2026-01-13 18:26:26.154067,sender_0071,receiver_0071,20.04,payment,online,San Diego,atm,0
+tx_000072,2026-01-19 23:46:27.154067,sender_0072,receiver_0072,44.44,transfer,grocery,San Antonio,pos,0
+tx_000073,2026-01-31 13:43:40.154067,sender_0073,receiver_0073,446.74,transfer,retail,Philadelphia,web,0
+tx_000074,2026-01-08 04:31:14.154067,sender_0074,receiver_0074,51.0,transfer,retail,LA,pos,0
+tx_000075,2026-01-17 21:08:16.154067,sender_0075,receiver_0075,75.6,transfer,online,Chicago,web,0
+tx_000076,2026-01-16 20:02:05.154067,sender_0076,receiver_0076,117.76,withdrawal,retail,Houston,web,0
+tx_000077,2026-01-13 07:28:02.154067,sender_0077,receiver_0077,123.38,transfer,online,NYC,web,0
+tx_000078,2026-01-08 08:44:28.154067,sender_0078,receiver_0078,56.95,withdrawal,gas,Houston,mobile,0
+tx_000079,2026-01-01 22:07:16.154067,sender_0079,receiver_0079,9.06,payment,gas,Chicago,atm,0
+tx_000080,2026-01-14 01:41:05.154067,sender_0080,receiver_0080,178.49,transfer,gas,San Diego,web,0
+tx_000081,2026-01-16 23:08:14.154067,sender_0081,receiver_0081,104.3,payment,restaurant,San Diego,web,0
+tx_000082,2026-01-22 02:40:29.154067,sender_0082,receiver_0082,10.54,transfer,grocery,Houston,pos,0
+tx_000083,2026-01-30 22:17:36.154067,sender_0083,receiver_0083,19.62,payment,online,LA,mobile,0
+tx_000084,2026-01-16 12:39:09.154067,sender_0084,receiver_0084,206.7,transfer,gas,NYC,web,0
+tx_000085,2026-01-20 07:08:17.154067,sender_0085,receiver_0085,135.4,transfer,online,San Diego,web,0
+tx_000086,2026-01-23 23:36:51.154067,sender_0086,receiver_0086,48.1505900907372,payment,restaurant,San Diego,atm,1
+tx_000087,2026-01-12 23:32:01.154067,sender_0087,receiver_0087,36.42,transfer,online,LA,web,0
+tx_000088,2026-01-18 03:37:41.154067,sender_0088,receiver_0088,44.03,transfer,gas,Philadelphia,atm,0
+tx_000089,2026-01-02 05:16:13.154067,sender_0089,receiver_0089,137.76,transfer,gas,NYC,atm,0
+tx_000090,2026-01-29 10:20:59.154067,sender_0090,receiver_0090,355.46,transfer,restaurant,NYC,mobile,0
+tx_000091,2026-01-28 03:44:13.154067,sender_0091,receiver_0091,253.57667845350173,withdrawal,online,LA,mobile,1
+tx_000092,2026-01-19 01:32:53.154067,sender_0092,receiver_0092,315.39,transfer,gas,LA,web,0
+tx_000093,2026-01-25 04:33:52.154067,sender_0093,receiver_0093,202.35,payment,retail,San Diego,mobile,0
+tx_000094,2026-01-27 11:21:48.154067,sender_0094,receiver_0094,74.33,payment,grocery,Philadelphia,mobile,0
+tx_000095,2026-01-21 22:21:55.154067,sender_0095,receiver_0095,6.26,payment,restaurant,Chicago,web,0
+tx_000096,2026-01-03 05:31:59.154067,sender_0096,receiver_0096,11.69,transfer,entertainment,San Antonio,mobile,0
+tx_000097,2026-01-31 11:44:55.154067,sender_0097,receiver_0097,165.98,transfer,restaurant,San Diego,web,0
+tx_000098,2026-01-21 18:11:24.154067,sender_0098,receiver_0098,4.2,deposit,restaurant,San Diego,web,0
+tx_000099,2026-01-26 02:05:27.154067,sender_0099,receiver_0099,65.27,withdrawal,online,NYC,web,0

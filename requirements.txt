@@ -1,0 +1,20 @@
+# Core data processing and ML libraries
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.1.0
+
+# Gradient boosting libraries
+lightgbm>=3.3.0
+xgboost>=1.6.0
+
+# Property-based testing
+hypothesis>=6.0.0
+
+# Additional utilities for ML pipeline
+joblib>=1.2.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
