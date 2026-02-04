@@ -194,9 +194,6 @@ models/schemas/*/
 !models/metadata/
 !models/pipeline_metadata/
 !models/registry/
-*.pkl
-*.joblib
-*.model
 *.h5
 *.hdf5
 
