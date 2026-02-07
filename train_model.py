@@ -1,16 +1,4 @@
 #!/usr/bin/env python3
-"""
-Training script for the fraud detection system.
-
-This script implements an end-to-end training pipeline that:
-1. Loads and validates the 5M transaction dataset
-2. Performs data preprocessing and feature engineering
-3. Trains the complete fraud detection pipeline
-4. Evaluates model performance
-5. Saves the trained model with comprehensive metadata
-
-Requirements: 8.1 - Process the 5 million transaction dataset within reasonable time limits
-"""
 
 import argparse
 import logging
@@ -23,7 +11,6 @@ from typing import Optional, Dict, Any
 import pandas as pd
 import numpy as np
 
-# Add src directory to path
 sys.path.append(str(Path(__file__).parent / 'src'))
 
 from fraud_detector import FraudDetector

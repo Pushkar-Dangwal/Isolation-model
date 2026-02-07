@@ -34,9 +34,7 @@ def create_sample_transactions(n_transactions: int = 10) -> pd.DataFrame:
     Returns:
         DataFrame with sample transaction data
     """
-    np.random.seed(42)  # For reproducible demo
-    
-    # Generate realistic transaction data
+    np.random.seed(42)  
     transactions = []
     base_time = datetime.now() - timedelta(days=1)
     
