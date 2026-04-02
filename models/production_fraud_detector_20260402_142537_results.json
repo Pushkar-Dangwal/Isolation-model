@@ -1,0 +1,120 @@
+{
+  "model_name": "production_fraud_detector_20260402_142537",
+  "model_type": "Deep Isolation Forest + LightGBM (Original Architecture)",
+  "data_generation": {
+    "method": "SMOTENC",
+    "source": "financial.csv",
+    "improvements": [
+      "Proper categorical handling with SMOTENC",
+      "Only minority class oversampled",
+      "Applied after train-test split",
+      "Realistic timestamps",
+      "No data leakage"
+    ]
+  },
+  "dataset": {
+    "train_size": 159958,
+    "train_fraud_rate": 0.750196926693257,
+    "test_size": 10000,
+    "test_fraud_rate": 0.001,
+    "data_leakage": true
+  },
+  "test_metrics": {
+    "overall_metrics": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1_score": 0.8888888888888888,
+      "pr_auc": 0.9106117353308364,
+      "roc_auc": 0.9991991991991993,
+      "accuracy": 0.9998
+    },
+    "confusion_matrix": {
+      "true_negatives": 9990,
+      "false_positives": 0,
+      "false_negatives": 2,
+      "true_positives": 8
+    },
+    "risk_analysis": {
+      "risk_distribution": {
+        "low": 9991,
+        "high": 8,
+        "medium": 1
+      },
+      "fraud_by_risk_level": {
+        "low": {
+          "count": 9991,
+          "fraud_count": 1,
+          "fraud_rate": 0.00010009008107296567,
+          "percentage_of_total": 99.91
+        },
+        "medium": {
+          "count": 1,
+          "fraud_count": 1,
+          "fraud_rate": 1.0,
+          "percentage_of_total": 0.01
+        },
+        "high": {
+          "count": 8,
+          "fraud_count": 8,
+          "fraud_rate": 1.0,
+          "percentage_of_total": 0.08
+        }
+      }
+    },
+    "component_performance": {
+      "anomaly_detector": {
+        "component_status": "fitted",
+        "feature_count": 50
+      },
+      "classifier": {
+        "component_status": "fitted",
+        "model_type": "LightGBM",
+        "training_history": {
+          "n_train_samples": 127966,
+          "n_features": 51,
+          "fraud_rate_train": 0.7501992716815404,
+          "best_iteration": 126,
+          "n_estimators_used": 126,
+          "scale_pos_weight": 0.33297916666666666,
+          "train_auc": 1.0,
+          "train_precision": 1.0,
+          "train_recall": 0.9999270833333334,
+          "train_f1": 0.9999635403374081,
+          "n_val_samples": 31992,
+          "fraud_rate_val": 0.7501875468867217,
+          "val_auc": 0.9999988634467801,
+          "val_precision": 1.0,
+          "val_recall": 0.99975,
+          "val_f1": 0.9998749843730467,
+          "best_scores": {
+            "train": {
+              "auc": 1.0
+            },
+            "valid": {
+              "auc": 0.9999988634467801
+            }
+          }
+        }
+      },
+      "risk_scorer": {
+        "component_status": "fitted",
+        "threshold_config": {
+          "low_risk": 0.3,
+          "high_risk": 0.7
+        },
+        "risk_distribution": {
+          "low": 9991,
+          "high": 8,
+          "medium": 1
+        }
+      }
+    },
+    "business_metrics": {
+      "fraud_detection_rate": 0.8,
+      "false_positive_rate": 0.0,
+      "customer_friction_rate": 0.0008,
+      "precision_at_high_risk": 1.0
+    }
+  },
+  "timestamp": "2026-04-02T14:25:37.088030"
+}

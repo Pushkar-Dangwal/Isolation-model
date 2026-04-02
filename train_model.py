@@ -308,11 +308,11 @@ def train_fraud_detector(df: pd.DataFrame, config: Dict[str, Any]) -> FraudDetec
 def evaluate_model(detector: FraudDetector, df: pd.DataFrame, 
                   config: Dict[str, Any]) -> Dict[str, Any]:
     """
-    Evaluate the trained model comprehensively.
+    Evaluate the trained model comprehensively using time-based split to prevent data leakage.
     
     Args:
         detector: Trained FraudDetector
-        df: Evaluation DataFrame
+        df: Evaluation DataFrame (full dataset)
         config: Evaluation configuration
         
     Returns:
@@ -320,43 +320,102 @@ def evaluate_model(detector: FraudDetector, df: pd.DataFrame,
     """
     logger = logging.getLogger(__name__)
     
-    logger.info("Starting comprehensive model evaluation...")
+    logger.info("Starting comprehensive model evaluation with time-based split...")
     
-    # Split data for evaluation (use same split as training for consistency)
-    from sklearn.model_selection import train_test_split
+    # CRITICAL FIX: Use time-based split to prevent data leakage
+    # Sort by timestamp to simulate real-world scenario
+    if 'timestamp' not in df.columns:
+        logger.error("Timestamp column required for proper evaluation")
+        raise ValueError("Timestamp column required for time-based split")
     
-    # Prepare data
-    y = df['is_fraud'].values
+    # Ensure timestamp is datetime
+    if not pd.api.types.is_datetime64_any_dtype(df['timestamp']):
+        df['timestamp'] = pd.to_datetime(df['timestamp'], errors='coerce')
     
-    # Check if we have enough samples for stratified split
-    unique_classes, class_counts = np.unique(y, return_counts=True)
-    min_class_count = min(class_counts)
+    # Sort by timestamp
+    df_sorted = df.sort_values('timestamp').reset_index(drop=True)
     
-    if min_class_count < 2:
-        logger.warning(f"Insufficient samples for stratified split (min class has {min_class_count} samples). Using random split.")
-        X_train, X_test, y_train, y_test = train_test_split(
-            df, y, test_size=config['validation_split'], 
-            random_state=config['random_seed']
-        )
-    else:
-        X_train, X_test, y_train, y_test = train_test_split(
-            df, y, test_size=config['validation_split'], 
-            stratify=y, random_state=config['random_seed']
-        )
+    # Time-based split: first 80% for train, last 20% for test
+    # This simulates training on past data, evaluating on future data
+    split_idx = int(len(df_sorted) * (1 - config['validation_split']))
     
-    # Evaluate on test set
-    evaluation_results = detector.evaluate(
-        X_test, 
-        target_column='is_fraud',
-        transaction_id_column='transaction_id'
+    train_df = df_sorted.iloc[:split_idx].copy()
+    test_df = df_sorted.iloc[split_idx:].copy()
+    
+    y_test = test_df['is_fraud'].values
+    
+    logger.info(f"Time-based evaluation split:")
+    logger.info(f"  Training period: {train_df['timestamp'].min()} to {train_df['timestamp'].max()}")
+    logger.info(f"  Test period: {test_df['timestamp'].min()} to {test_df['timestamp'].max()}")
+    logger.info(f"  Train samples: {len(train_df)}, Test samples: {len(test_df)}")
+    logger.info(f"  Test fraud rate: {np.mean(y_test):.1%}")
+    
+    # CRITICAL: Generate predictions ONLY on test data
+    # Features will be computed using only test data (no data leakage)
+    logger.info("Generating predictions on test data only (no data leakage)...")
+    predictions = detector.predict(
+        test_df, 
+        transaction_id_column='transaction_id',
+        return_probabilities=True, 
+        return_risk_levels=True
     )
+    
+    y_proba = predictions['fraud_probability'].values
+    y_pred = predictions['fraud_prediction'].values
+    
+    # Calculate comprehensive metrics on test subset only
+    from sklearn.metrics import (
+        precision_recall_curve, roc_curve, auc, precision_score,
+        recall_score, f1_score, confusion_matrix
+    )
+    
+    # Basic metrics
+    precision = precision_score(y_test, y_pred, zero_division=0)
+    recall = recall_score(y_test, y_pred, zero_division=0)
+    f1 = f1_score(y_test, y_pred, zero_division=0)
+    
+    # Curve metrics
+    precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_test, y_proba)
+    fpr, tpr, roc_thresholds = roc_curve(y_test, y_proba)
+    pr_auc = auc(recall_curve, precision_curve)
+    roc_auc = auc(fpr, tpr)
+    
+    # Confusion matrix
+    cm = confusion_matrix(y_test, y_pred)
+    tn, fp, fn, tp = cm.ravel() if cm.shape == (2, 2) else (0, 0, 0, 0)
+    
+    # Risk level analysis
+    risk_levels = predictions['risk_level'].values
+    risk_distribution = pd.Series(risk_levels).value_counts().to_dict()
+    
+    # Create evaluation results matching the expected format
+    evaluation_results = {
+        'overall_metrics': {
+            'precision': float(precision),
+            'recall': float(recall),
+            'f1_score': float(f1),
+            'pr_auc': float(pr_auc),
+            'roc_auc': float(roc_auc),
+            'accuracy': float((tp + tn) / (tp + tn + fp + fn)) if (tp + tn + fp + fn) > 0 else 0.0
+        },
+        'confusion_matrix': {
+            'true_negatives': int(tn),
+            'false_positives': int(fp),
+            'false_negatives': int(fn),
+            'true_positives': int(tp)
+        },
+        'risk_analysis': {
+            'risk_distribution': risk_distribution
+        },
+        'business_metrics': {
+            'fraud_detection_rate': float(tp / (tp + fn)) if (tp + fn) > 0 else 0.0,
+            'false_positive_rate': float(fp / (fp + tn)) if (fp + tn) > 0 else 0.0,
+            'customer_friction_rate': float((tp + fp) / len(y_test))
+        }
+    }
     
     # Initialize model evaluator for additional analysis
     evaluator = ModelEvaluator(save_plots=config.get('save_plots', False))
-    
-    # Generate predictions for detailed analysis
-    predictions = detector.predict(X_test, return_probabilities=True, return_risk_levels=True)
-    y_proba = predictions['fraud_probability'].values
     
     # Generate comprehensive performance report
     performance_report = evaluator.generate_performance_report(
@@ -372,10 +431,13 @@ def evaluate_model(detector: FraudDetector, df: pd.DataFrame,
         'pipeline_evaluation': evaluation_results,
         'performance_report': performance_report,
         'evaluation_metadata': {
-            'test_samples': len(X_test),
+            'test_samples': len(test_df),
             'test_fraud_rate': float(np.mean(y_test)),
             'evaluation_timestamp': datetime.now().isoformat(),
-            'model_name': config['model_name']
+            'model_name': config['model_name'],
+            'evaluation_method': 'time_based_split_no_leakage',
+            'train_period': f"{train_df['timestamp'].min()} to {train_df['timestamp'].max()}",
+            'test_period': f"{test_df['timestamp'].min()} to {test_df['timestamp'].max()}"
         }
     }
     

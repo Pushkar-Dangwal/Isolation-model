@@ -1,0 +1,57 @@
+{
+  "model_name": "balanced_fraud_detector_20260402_135811",
+  "model_type": "IsolationForest",
+  "dataset": {
+    "total_samples": 300000,
+    "fraud_samples": 150000,
+    "legitimate_samples": 150000,
+    "fraud_rate": 0.5
+  },
+  "features": [
+    "transaction_amount",
+    "account_age_days",
+    "transaction_hour",
+    "location_match",
+    "previous_transactions",
+    "avg_transaction_amount",
+    "days_since_last_transaction",
+    "merchant_category_electronics",
+    "merchant_category_gas",
+    "merchant_category_grocery",
+    "merchant_category_jewelry",
+    "merchant_category_online",
+    "merchant_category_restaurant",
+    "merchant_category_retail",
+    "merchant_category_travel",
+    "device_type_mobile",
+    "device_type_tablet"
+  ],
+  "training": {
+    "train_size": 240000,
+    "test_size": 60000,
+    "contamination": 0.5,
+    "n_estimators": 100,
+    "random_state": 42
+  },
+  "evaluation": {
+    "test_set": {
+      "accuracy": 0.46108333333333335,
+      "precision": 0.4611183268391781,
+      "recall": 0.46153333333333335,
+      "f1": 0.461325736751795,
+      "roc_auc": 0.4171147477777778,
+      "pr_auc": 0.469469358818413,
+      "confusion_matrix": {
+        "tn": 13819,
+        "fp": 16181,
+        "fn": 16154,
+        "tp": 13846
+      }
+    },
+    "train_set": {
+      "accuracy": 0.460375,
+      "f1": 0.460375
+    }
+  },
+  "timestamp": "2026-04-02T13:58:11.941106"
+}

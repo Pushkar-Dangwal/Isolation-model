@@ -37,8 +37,151 @@
         "consistency_validated": true,
         "consistency_checks": {}
       }
+    },
+    "fraud_detector_20260320_130507_preprocessing": {
+      "v1.0_20260320_131351": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-03-20T13:13:51.691204",
+        "preprocessor_path": "pipelines\\fraud_detector_20260320_130507_preprocessing\\v1.0_20260320_131351\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\fraud_detector_20260320_130507_preprocessing\\v1.0_20260320_131351\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\fraud_detector_20260320_130507_preprocessing\\v1.0_20260320_131351\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "fraud_detector_fixed_20260320_132428_preprocessing": {
+      "v1.0_20260320_132653": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-03-20T13:26:53.730280",
+        "preprocessor_path": "pipelines\\fraud_detector_fixed_20260320_132428_preprocessing\\v1.0_20260320_132653\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\fraud_detector_fixed_20260320_132428_preprocessing\\v1.0_20260320_132653\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\fraud_detector_fixed_20260320_132428_preprocessing\\v1.0_20260320_132653\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "fraud_detector_20260320_133015_preprocessing": {
+      "v1.0_20260320_134242": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-03-20T13:42:42.228093",
+        "preprocessor_path": "pipelines\\fraud_detector_20260320_133015_preprocessing\\v1.0_20260320_134242\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\fraud_detector_20260320_133015_preprocessing\\v1.0_20260320_134242\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\fraud_detector_20260320_133015_preprocessing\\v1.0_20260320_134242\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "fraud_detector_20260320_134826_preprocessing": {
+      "v1.0_20260320_135747": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-03-20T13:57:47.799532",
+        "preprocessor_path": "pipelines\\fraud_detector_20260320_134826_preprocessing\\v1.0_20260320_135747\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\fraud_detector_20260320_134826_preprocessing\\v1.0_20260320_135747\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\fraud_detector_20260320_134826_preprocessing\\v1.0_20260320_135747\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "original_fraud_detector_20260402_141322_preprocessing": {
+      "20260402_141322": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:13:22.146977",
+        "preprocessor_path": "pipelines\\original_fraud_detector_20260402_141322_preprocessing\\20260402_141322\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\original_fraud_detector_20260402_141322_preprocessing\\20260402_141322\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\original_fraud_detector_20260402_141322_preprocessing\\20260402_141322\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "original_fraud_detector_20260402_141517_preprocessing": {
+      "20260402_141517": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:15:17.113634",
+        "preprocessor_path": "pipelines\\original_fraud_detector_20260402_141517_preprocessing\\20260402_141517\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\original_fraud_detector_20260402_141517_preprocessing\\20260402_141517\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\original_fraud_detector_20260402_141517_preprocessing\\20260402_141517\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "original_fraud_detector_20260402_141713_preprocessing": {
+      "20260402_141713": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:17:13.266563",
+        "preprocessor_path": "pipelines\\original_fraud_detector_20260402_141713_preprocessing\\20260402_141713\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\original_fraud_detector_20260402_141713_preprocessing\\20260402_141713\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\original_fraud_detector_20260402_141713_preprocessing\\20260402_141713\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "production_fraud_detector_20260402_142311_preprocessing": {
+      "20260402_142311": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:23:11.968455",
+        "preprocessor_path": "pipelines\\production_fraud_detector_20260402_142311_preprocessing\\20260402_142311\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\production_fraud_detector_20260402_142311_preprocessing\\20260402_142311\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\production_fraud_detector_20260402_142311_preprocessing\\20260402_142311\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "production_fraud_detector_20260402_142537_preprocessing": {
+      "20260402_142537": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:25:37.094065",
+        "preprocessor_path": "pipelines\\production_fraud_detector_20260402_142537_preprocessing\\20260402_142537\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\production_fraud_detector_20260402_142537_preprocessing\\20260402_142537\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\production_fraud_detector_20260402_142537_preprocessing\\20260402_142537\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "production_fraud_detector_20260402_142837_preprocessing": {
+      "20260402_142837": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:28:37.959438",
+        "preprocessor_path": "pipelines\\production_fraud_detector_20260402_142837_preprocessing\\20260402_142837\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\production_fraud_detector_20260402_142837_preprocessing\\20260402_142837\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\production_fraud_detector_20260402_142837_preprocessing\\20260402_142837\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
+    },
+    "production_fraud_detector_20260402_143243_preprocessing": {
+      "20260402_143243": {
+        "pipeline_type": "fraud_detection_preprocessing",
+        "created_at": "2026-04-02T14:32:43.552012",
+        "preprocessor_path": "pipelines\\production_fraud_detector_20260402_143243_preprocessing\\20260402_143243\\preprocessor.joblib",
+        "feature_engineer_path": "pipelines\\production_fraud_detector_20260402_143243_preprocessing\\20260402_143243\\feature_engineer.joblib",
+        "metadata_path": "pipelines\\production_fraud_detector_20260402_143243_preprocessing\\20260402_143243\\pipeline_metadata.json",
+        "schema_path": null,
+        "preprocessing_hash": "25c7cb0175093b29245f7a4bfcb6d66c96155055464209853c26e1db30b90f50",
+        "consistency_validated": true,
+        "consistency_checks": {}
+      }
     }
   },
   "version": "1.0",
-  "last_updated": "2026-01-31T18:30:27.091175"
+  "last_updated": "2026-04-02T14:32:43.558988"
 }
