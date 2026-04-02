@@ -72,8 +72,92 @@
         "size_bytes": 775497,
         "hash": "e0deb1e95ee9e9bff7183c3c0adf21c076ee6cb368f41925cd178740795b8c8d"
       }
+    },
+    "original_fraud_detector_20260402_141322": {
+      "20260402_141322": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:13:22.204007",
+        "file_path": "models\\original_fraud_detector_20260402_141322\\20260402_141322\\original_fraud_detector_20260402_141322.joblib",
+        "metadata_path": "models\\original_fraud_detector_20260402_141322\\20260402_141322\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 754811,
+        "hash": "9300d993f45af28bcd33280ee2a69955690bacf7799f6abf5ee36018c2d96516"
+      }
+    },
+    "original_fraud_detector_20260402_141517": {
+      "20260402_141517": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:15:17.178809",
+        "file_path": "models\\original_fraud_detector_20260402_141517\\20260402_141517\\original_fraud_detector_20260402_141517.joblib",
+        "metadata_path": "models\\original_fraud_detector_20260402_141517\\20260402_141517\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 754821,
+        "hash": "30b22dfa407764dde9c709de47f06e992e3fdef4d7c66332c473f820cfbefd0d"
+      }
+    },
+    "original_fraud_detector_20260402_141713": {
+      "20260402_141713": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:17:13.328974",
+        "file_path": "models\\original_fraud_detector_20260402_141713\\20260402_141713\\original_fraud_detector_20260402_141713.joblib",
+        "metadata_path": "models\\original_fraud_detector_20260402_141713\\20260402_141713\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 754818,
+        "hash": "b5a1e572ba198d2cae82c15852228f4d28290fdda70121a06645225624724f2f"
+      }
+    },
+    "production_fraud_detector_20260402_142311": {
+      "20260402_142311": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:23:12.065651",
+        "file_path": "models\\production_fraud_detector_20260402_142311\\20260402_142311\\production_fraud_detector_20260402_142311.joblib",
+        "metadata_path": "models\\production_fraud_detector_20260402_142311\\20260402_142311\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 898816,
+        "hash": "294b100708f823cbda4457a8540b255881c9270cf63c14708cd035eb2552ee22"
+      }
+    },
+    "production_fraud_detector_20260402_142537": {
+      "20260402_142537": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:25:37.194917",
+        "file_path": "models\\production_fraud_detector_20260402_142537\\20260402_142537\\production_fraud_detector_20260402_142537.joblib",
+        "metadata_path": "models\\production_fraud_detector_20260402_142537\\20260402_142537\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 898823,
+        "hash": "f0300e507365d0d252b6b48289f1db4be18da4b7c95e8785c5534d4bc8bd3c7f"
+      }
+    },
+    "production_fraud_detector_20260402_142837": {
+      "20260402_142837": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:28:38.058626",
+        "file_path": "models\\production_fraud_detector_20260402_142837\\20260402_142837\\production_fraud_detector_20260402_142837.joblib",
+        "metadata_path": "models\\production_fraud_detector_20260402_142837\\20260402_142837\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 898816,
+        "hash": "9948602dd7ba1f783e1190ee1802dd7f7a54e0abae7e6c95b7c81c5f64649ee6"
+      }
+    },
+    "production_fraud_detector_20260402_143243": {
+      "20260402_143243": {
+        "model_type": "fraud_detection_pipeline",
+        "created_at": "2026-04-02T14:32:43.641095",
+        "file_path": "models\\production_fraud_detector_20260402_143243\\20260402_143243\\production_fraud_detector_20260402_143243.joblib",
+        "metadata_path": "models\\production_fraud_detector_20260402_143243\\20260402_143243\\metadata.json",
+        "format": "joblib",
+        "compressed": true,
+        "size_bytes": 869038,
+        "hash": "f7c5c88a72e3b67570e53ed0a0aa0d8053c6a093bbe9650d12db668b0ae20446"
+      }
     }
   },
   "version": "1.0",
-  "last_updated": "2026-03-20T13:57:47.895466"
+  "last_updated": "2026-04-02T14:32:43.648784"
 }

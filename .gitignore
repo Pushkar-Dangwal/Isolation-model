@@ -293,3 +293,4 @@ processed_data/
 raw_data/
 external_data/
 .kiro
+*.md

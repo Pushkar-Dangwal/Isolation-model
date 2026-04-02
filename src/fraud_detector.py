@@ -2026,7 +2026,7 @@ class FraudDetector:
             from sklearn.metrics import precision_recall_curve, roc_curve, auc, confusion_matrix
             
             # Generate binary predictions for confusion matrix
-            optimal_threshold = 0.5
+            optimal_threshold = 0.4
             if hasattr(self.risk_scorer, 'optimal_thresholds') and 'f1_optimal' in self.risk_scorer.optimal_thresholds:
                 optimal_threshold = self.risk_scorer.optimal_thresholds['f1_optimal']
             

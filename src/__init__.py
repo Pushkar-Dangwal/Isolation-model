@@ -1,2 +1,3 @@
-# Fraud Detection System
-# Main source code package
+"""
+Source package for dual-evaluation pipeline.
+"""
