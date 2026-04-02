@@ -488,8 +488,9 @@ class FeatureEngineer:
         """
         Transform new data using fitted feature engineering pipeline.
         
-        This method applies the same feature engineering transformations that were
-        learned during fit_transform, but without refitting the internal state.
+        IMPORTANT: This method now computes ALL features including time-based aggregations
+        to ensure consistency between training and inference. It uses the same logic as
+        fit_transform() but without updating internal state.
         
         Args:
             df: DataFrame to transform
@@ -510,42 +511,39 @@ class FeatureEngineer:
         if not self.is_fitted:
             raise ValueError("FeatureEngineer must be fitted before calling transform")
         
-        # Initialize missing attributes if they don't exist (for backward compatibility)
-        if not hasattr(self, 'sender_stats'):
-            self.sender_stats = {}
-        if not hasattr(self, 'receiver_stats'):
-            self.receiver_stats = {}
-        if not hasattr(self, 'anomaly_patterns'):
-            self.anomaly_patterns = {}
-        
         logger.info("Transforming new data using fitted feature engineering pipeline")
         
         df_features = df.copy()
         
-        # Step 1: Time-based features (using existing logic)
+        # Step 1: Time-based features (vectorized operations)
         df_features = self.create_time_features(df_features, timestamp_col)
         
-        # Step 2: Sender behavior features (using fitted statistics)
-        df_features = self._transform_sender_behavior_features(
-            df_features, sender_col=sender_col, 
-            amount_col=amount_col, timestamp_col=timestamp_col
+        # Step 2: Sender behavior features (compute with sliding windows)
+        # CRITICAL FIX: Actually compute these features instead of using fitted statistics
+        df_features = self.compute_sender_behavior(
+            df_features, timestamp_col=timestamp_col, 
+            sender_col=sender_col, amount_col=amount_col
         )
         
-        # Step 3: Receiver risk features (using fitted statistics)
-        df_features = self._transform_receiver_risk_features(
+        # Step 3: Receiver risk features (compute with aggregations)
+        # CRITICAL FIX: Actually compute these features instead of using fitted statistics
+        df_features = self.compute_receiver_risk(
             df_features, receiver_col=receiver_col, 
-            amount_col=amount_col, timestamp_col=timestamp_col
+            fraud_col=fraud_col if fraud_col and fraud_col in df_features.columns else 'is_fraud',
+            timestamp_col=timestamp_col
         )
         
-        # Step 4: Anomaly detection features (using fitted patterns)
-        df_features = self._transform_anomaly_features(
+        # Step 4: Anomaly detection features (compute with hashmap tracking)
+        # CRITICAL FIX: Actually compute these features instead of using fitted patterns
+        df_features = self.detect_anomalies(
             df_features, sender_col=sender_col, 
             location_col=location_col, device_col=device_col, 
             timestamp_col=timestamp_col
         )
         
-        # Step 5: Interaction features (using fitted statistics)
-        df_features = self._transform_interaction_features(
+        # Step 5: Interaction features (compute with aggregations)
+        # CRITICAL FIX: Actually compute these features instead of using fitted statistics
+        df_features = self.compute_interaction_features(
             df_features, sender_col=sender_col, 
             receiver_col=receiver_col, amount_col=amount_col
         )
